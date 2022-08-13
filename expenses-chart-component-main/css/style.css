@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --primary-1:hsl(10, 79%, 65%);
+  --primary-2:hsl(186, 34%, 60%);
+  --neutral-1: hsl(25, 47%, 15%);
+  --neutral-2: hsl(28, 10%, 53%);
+  --neutral-3: hsl(27, 66%, 92%);
+  --neutral-4: hsl(33, 100%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.higher {
+  background-color: var(--primary-2) !important;
+}
+
+.higher:hover {
+  background-color: #8ec2c7 !important;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--neutral-3);
+}
+
+main .account__card {
+  width: 450px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .account__card .balance {
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--primary-1);
+  margin-bottom: 1rem;
+}
+
+main .account__card .balance h1 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--neutral-4);
+  margin: .8rem 2rem .2rem 2rem;
+}
+
+main .account__card .balance h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--neutral-4);
+  margin: .2rem 2rem .8rem 2rem;
+}
+
+main .account__card .balance svg {
+  position: absolute;
+  right: 1.5rem;
+}
+
+main .account__card .spending {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: var(--neutral-4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main .account__card .spending .title {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 700;
+  top: .8rem;
+  left: 2rem;
+  color: var(--neutral-1);
+}
+
+main .account__card .spending .bar__fild {
+  width: 386px;
+  margin: 0 2rem 2.5rem 2rem;
+  height: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .account__card .spending .bar__fild .bar__item:hover :nth-child(1) {
+  visibility: visible;
+}
+
+main .account__card .spending .bar__fild .bar__item {
+  height: 100%;
+  width: 10%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: visible;
+}
+
+main .account__card .spending .bar__fild .bar__item .bar__info {
+  background-color: var(--neutral-1);
+  width: auto;
+  visibility: hidden;
+  border-radius: 5px;
+  height: 2rem;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .account__card .spending .bar__fild .bar__item .bar__info h4 {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 2px;
+  color: var(--neutral-4);
+}
+
+main .account__card .spending .bar__fild .bar__item .bar__fill {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--primary-1);
+  cursor: pointer;
+}
+
+main .account__card .spending .bar__fild .bar__item .bar__fill:hover {
+  background-color: #f0927f;
+}
+
+main .account__card .spending .bar__fild .bar__item p {
+  position: absolute;
+  bottom: -30px;
+  font-weight: 400;
+  color: var(--neutral-2);
+}
+
+main .account__card .spending .divisor {
+  width: 386px;
+  height: 2px;
+  background-color: var(--neutral-3);
+}
+
+main .account__card .spending .general {
+  width: 386px;
+  margin: 1rem 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .account__card .spending .general .month__ammount {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+main .account__card .spending .general .month__ammount h3 {
+  color: var(--neutral-2);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+main .account__card .spending .general .month__ammount h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--neutral-1);
+}
+
+main .account__card .spending .general .last__ammount {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .account__card .spending .general .last__ammount h3 {
+  color: var(--neutral-2);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+
+main .account__card .spending .general .last__ammount h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--neutral-1);
+}
+
+@media screen and (max-width: 500px) {
+  main .account__card {
+    width: 350px;
+  }
+  main .account__card .balance h1 {
+    margin: .8rem 1rem .2rem 1rem;
+  }
+  main .account__card .balance h2 {
+    margin: .2rem 1rem .8rem 1rem;
+  }
+  main .account__card .balance svg {
+    right: 1rem;
+  }
+  main .account__card .spending .title {
+    left: 1rem;
+  }
+  main .account__card .spending .bar__fild {
+    width: 318px;
+    margin: 0 1rem 2.5rem 1rem;
+    height: 175px;
+  }
+  main .account__card .spending .divisor {
+    width: 318px;
+    height: 2px;
+    background-color: var(--neutral-3);
+  }
+  main .account__card .spending .general {
+    width: 318px;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
